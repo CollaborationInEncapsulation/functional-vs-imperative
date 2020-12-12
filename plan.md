@@ -1,0 +1,18 @@
+- [ ] Currying
+    - [ ] Pow2 example
+    - [ ] Scope Model
+    - [ ] Implicit Params
+- [ ] High-Order Function For Recursion
+    - [ ] Comparison to Abstract Factor with Factory Method
+    - [ ] Types Definition
+    - [ ] Generics 
+- [ ] Immutability
+    - [ ] Show Mutability Problem Again
+    - [ ] Explain Interfaces via Traits
+    - [ ] Explain that everything that has `apply` method defined is implicitly treated as a function.
+          Explain how we can use apply to access a particular element from the vector.
+    - [ ] Create Abstract Vector transformation method
+    - [ ] Explain Type Loosing
+    - [ ] Add type recursion via `T <: Vector[T]` and explain type bounds
+    - [ ] Explain Implicits
+    - [ ] 
