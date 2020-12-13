@@ -27,7 +27,7 @@ object Application extends App {
     .via(GraphDSL.create() { implicit graphBuilder =>
       val IN = graphBuilder.add(Broadcast[Map[String, Any]](2))
       val PRICE = graphBuilder.add(Broadcast[Message[Float]](2))
-      val TRADE = graphBuilder.add(Broadcast[Message[Message.Trade]](1))
+      val TRADE = graphBuilder.add(Broadcast[Message[Message.Trade]](2))
       val OUT = graphBuilder.add(Merge[Message[Any]](3))
 
       IN ~> PriceFlow() ~> PRICE ~> PriceAvgFlow() ~> OUT
