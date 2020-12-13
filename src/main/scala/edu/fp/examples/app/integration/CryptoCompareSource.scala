@@ -8,8 +8,8 @@ import java.util
 import scala.concurrent.ExecutionContext
 
 object CryptoCompareSource {
-  def apply(markets: Seq[String]): Source[Map[String, Any], Any] = {
-    Source.fromMaterializer((mat, a) => {
+  def apply(subscriptions: Seq[String]): Source[Map[String, Any], Any] = {
+    Source.fromMaterializer((mat, _) => {
       println(s"Here $mat")
       implicit val context: ExecutionContext.parasitic.type = ExecutionContext.parasitic
       val (queue, source) = Source.queue[Map[String, Any]](256, OverflowStrategy.dropHead).preMaterialize()(mat)
@@ -17,13 +17,12 @@ object CryptoCompareSource {
 
       queue.watchCompletion()
         .onComplete(_ =>{
-          println("here")
           socket.disconnect()
         })
 
       socket
         .on(Socket.EVENT_CONNECT, (_: Array[AnyRef]) => {
-          val subscription = markets.toArray
+          val subscription = subscriptions.toArray
           val subs = new util.HashMap[String, AnyRef]
           subs.put("subs", subscription)
           socket.emit("SubAdd", subs) // { "subs" : ["5~CCCAGG~BTC~USD", "0~Coinbase~BTC~USD", "0~Cexio~BTC~USD"] }
