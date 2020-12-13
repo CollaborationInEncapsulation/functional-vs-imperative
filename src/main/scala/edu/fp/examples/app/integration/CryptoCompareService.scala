@@ -27,7 +27,6 @@ object CryptoCompareService {
       ctx.system.receptionist ! Receptionist.Register(CryptoCompareServiceKey, ctx.self)
 
       Behaviors.receiveMessage[CryptoCompareSourceRequest](sr => {
-        println("Received Message")
         CryptoCompareSource(sr.subscriptions)
           .to(sr.sink)
           .run
