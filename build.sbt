@@ -12,10 +12,10 @@ libraryDependencies += "org.scala-lang.modules" %% "scala-parallel-collections" 
 
 
 
-libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.6.10"
-libraryDependencies += "com.typesafe.akka" %% "akka-http" % "10.2.1"
-libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-mongodb" % "2.0.2"
-libraryDependencies += "com.typesafe.akka" %% "akka-serialization-jackson" % "2.6.10"
+libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.6.17"
+libraryDependencies += "com.typesafe.akka" %% "akka-http" % "10.2.7"
+libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-mongodb" % "3.0.3"
+libraryDependencies += "com.typesafe.akka" %% "akka-serialization-jackson" % "2.6.17"
 
 libraryDependencies += "io.socket" % "socket.io-client" % "1.0.1"
 
@@ -23,11 +23,11 @@ libraryDependencies += "io.socket" % "socket.io-client" % "1.0.1"
 
 
 
-libraryDependencies += "com.typesafe.akka" %% "akka-slf4j" % "2.6.10"
-libraryDependencies += "com.typesafe.akka" %% "akka-http-xml" % "10.2.1"
-libraryDependencies += "com.typesafe.akka" %% "akka-actor-typed" % "2.6.10"
-libraryDependencies += "com.typesafe.akka" %% "akka-cluster-typed" % "2.6.10"
-libraryDependencies += "com.typesafe.akka" %% "akka-stream-typed" % "2.6.10"
+libraryDependencies += "com.typesafe.akka" %% "akka-slf4j" % "2.6.17"
+libraryDependencies += "com.typesafe.akka" %% "akka-http-xml" % "10.2.7"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor-typed" % "2.6.17"
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster-typed" % "2.6.17"
+libraryDependencies += "com.typesafe.akka" %% "akka-stream-typed" % "2.6.17"
 libraryDependencies += "com.typesafe.slick" %% "slick" % "3.3.3"
 libraryDependencies += "com.h2database" % "h2" % "1.4.200"
 
